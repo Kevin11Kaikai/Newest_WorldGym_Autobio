@@ -53,13 +53,13 @@
     },
     {
       "path": "media/figures/native_comparison_10demo.png",
-      "sha256": "cb0f17ab0a39e48ce406057000e1f253bc88cad25928a849dbfcffecb5bbe999",
-      "bytes": 215620
+      "sha256": "65d558f34dbe22a615b493458b22cff130562c09f6f443c26a439ce40d5ccb66",
+      "bytes": 562901
     },
     {
       "path": "media/figures/native_comparison_80demo.png",
-      "sha256": "73bb18197f558c3120f932c2262ea6d27ed1e236d1bc0b906863a295db7d26ba",
-      "bytes": 218016
+      "sha256": "95ff7b65b90fdf28146361d03172dbda136a8b57fa3aaa2f20b886bfab254635",
+      "bytes": 572315
     }
   ]
 }
