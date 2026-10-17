@@ -1,0 +1,312 @@
+{
+  "format": 1,
+  "task_bundle_status": "LOCAL_PREPARED_NOT_PUBLISHED; no download URL exists yet",
+  "assets": {
+    "smolvla": {
+      "path": "assets/public/lerobot--smolvla_base",
+      "kind": "huggingface",
+      "repo_id": "lerobot/smolvla_base",
+      "revision": "5e8d12a6e2975b0e5e5fce7c8caf47c371d257b6",
+      "files": {
+        "config.json": {
+          "bytes": 2299,
+          "sha256": "650584b56c104720f7a3c91d1ec6bec9e8de8ac11e60c92ba2fa82d93eda147d"
+        },
+        "model.safetensors": {
+          "bytes": 906712520,
+          "sha256": "7cd549ac2351fb069c0ddb3c34ad2d09cfc92b56a15dccdfc2e41467aaca01eb"
+        },
+        "policy_postprocessor.json": {
+          "bytes": 660,
+          "sha256": "2b78bb742065288df2ec63b0ee35f97a1f6950171cf2272f7e34b1fe3873b17b"
+        },
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": {
+          "bytes": 640,
+          "sha256": "490ab239d96e263687c0b2e386a0afbc235a2eceb9857c36ed32f2f162a3e7c8"
+        },
+        "policy_preprocessor.json": {
+          "bytes": 1872,
+          "sha256": "7683d648280a72f0d51e869fb8dd1596beed90b7f84849330cf1bc26634a4bd6"
+        },
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": {
+          "bytes": 640,
+          "sha256": "490ab239d96e263687c0b2e386a0afbc235a2eceb9857c36ed32f2f162a3e7c8"
+        }
+      }
+    },
+    "smolvlm": {
+      "path": "assets/public/HuggingFaceTB--SmolVLM2-500M-Video-Instruct",
+      "kind": "huggingface",
+      "repo_id": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+      "revision": "7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+      "files": {
+        "added_tokens.json": {
+          "bytes": 4739,
+          "sha256": "74135b8664b56088c0006f1c8e848d79a8eba003411f72ebf1dc2ee96227be3a"
+        },
+        "chat_template.json": {
+          "bytes": 430,
+          "sha256": "b585e3598909a5687f9f9d738d35223724dedef256b9b274e1cbfb32b13c74bf"
+        },
+        "config.json": {
+          "bytes": 3767,
+          "sha256": "ea6bc1237e96247f6258de3e202e2e62b93d6f386dc47e7b36b5588bf3a15e17"
+        },
+        "generation_config.json": {
+          "bytes": 136,
+          "sha256": "34835060c9f0f74d1acb456cc72ca32746d3843d9eb5f578f9cbffac1d2eb840"
+        },
+        "merges.txt": {
+          "bytes": 466391,
+          "sha256": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510"
+        },
+        "model.safetensors": {
+          "bytes": 2029990624,
+          "sha256": "b9bfd456c9472c0acd5719d6e514c4b859891af205ee1a736552fd3497b8b0c3"
+        },
+        "preprocessor_config.json": {
+          "bytes": 599,
+          "sha256": "149e315d9410368e5491455bb06e0f763426e9e56cca731c13b24404a29b6374"
+        },
+        "processor_config.json": {
+          "bytes": 67,
+          "sha256": "f3ad45028447b3562b4752be0d5916d6806c1ef589091a469608dcf0faa1737c"
+        },
+        "special_tokens_map.json": {
+          "bytes": 868,
+          "sha256": "2dfea2a426162316ff1567c82bc6d36d9690cd9f90455f075c77daca78b45c60"
+        },
+        "tokenizer.json": {
+          "bytes": 3548256,
+          "sha256": "5ece781dc8d2b2f3e2f289ca0ae50b17cfc27dd27bfe7971bb8241e0b964331a"
+        },
+        "tokenizer_config.json": {
+          "bytes": 28626,
+          "sha256": "dd9ce2ab89a3dd881bd9378f1a79b943a064b9275a7e1706d5b7b47b68977913"
+        },
+        "vocab.json": {
+          "bytes": 800662,
+          "sha256": "82b84012e3add4d01d12ba14442026e49b8cbbaead1f79ecf3d919784f82dc79"
+        }
+      }
+    },
+    "qwen7b": {
+      "path": "assets/public/Qwen--Qwen2.5-VL-7B-Instruct",
+      "kind": "huggingface",
+      "repo_id": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "files": {
+        "chat_template.json": {
+          "bytes": 1050,
+          "sha256": "ad60d90252ed0b0705ba14e2d0ad0fec0beac1ea955642b54059b36052d8bc96"
+        },
+        "config.json": {
+          "bytes": 1374,
+          "sha256": "77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43"
+        },
+        "generation_config.json": {
+          "bytes": 216,
+          "sha256": "0a3aea82869fe29f20dc95ccf3e2bcff380eca1f5ad6447a4a4b37110b08e43e"
+        },
+        "merges.txt": {
+          "bytes": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+        },
+        "model-00001-of-00005.safetensors": {
+          "bytes": 3900233256,
+          "sha256": "e97b877e47fde53a6c6e77aafb36e58e91ee9d95c4a3eeac6f1b5c0e6a1c986e"
+        },
+        "model-00002-of-00005.safetensors": {
+          "bytes": 3864726320,
+          "sha256": "a9a300a43b4724eee2abe7c18ceb26768d0ab011eb0cad19d9bfd2476a24d024"
+        },
+        "model-00003-of-00005.safetensors": {
+          "bytes": 3864726424,
+          "sha256": "111223d173e00bbee81cba1216fad28668df3476706b7fd26f4d5b50f8b3a507"
+        },
+        "model-00004-of-00005.safetensors": {
+          "bytes": 3864733680,
+          "sha256": "ef47f634fa57d46ee134edcc09f34085a47da1e16c12a2abe0d67118be6d72ed"
+        },
+        "model-00005-of-00005.safetensors": {
+          "bytes": 1089994880,
+          "sha256": "0c859795ad3a627a9b95bcb762e059d5b768a4a36fdd4affeff269d93fdecc67"
+        },
+        "model.safetensors.index.json": {
+          "bytes": 57619,
+          "sha256": "73b333b0b16e5286ddba615d2caebcd495cf7e616f52eb217a81781393d79de9"
+        },
+        "preprocessor_config.json": {
+          "bytes": 350,
+          "sha256": "f2058c716eef96ccaed1cc1e2d0c08306b62586d535b28d9d08e691b2fab7ca0"
+        },
+        "tokenizer.json": {
+          "bytes": 7031645,
+          "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+        },
+        "tokenizer_config.json": {
+          "bytes": 5702,
+          "sha256": "4abd3520120e266da84c0864fee064d1fb10806f02225911a47253dd38dc5f56"
+        },
+        "vocab.json": {
+          "bytes": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+        }
+      }
+    },
+    "worldgym_base": {
+      "path": "assets/public/worldgym/base.pt",
+      "kind": "external",
+      "url": "https://drive.google.com/uc?id=1uiRP2BuavapMsyP9Cbr25mi_ymk9SEJb",
+      "files": {
+        ".": {
+          "bytes": 9727371838,
+          "sha256": "7acbf6702265e53909283ecdd4b3ddc2517f9fea460cf700369a076f2dfad182"
+        }
+      }
+    },
+    "vae": {
+      "path": "assets/public/sd3_medium",
+      "kind": "huggingface",
+      "files": {
+        "vae/config.json": {
+          "bytes": 739,
+          "sha256": "2b82cf4cf6728bb2b411199c437c16ce61a82265ebd8461d66600073c8470ee4"
+        },
+        "vae/diffusion_pytorch_model.safetensors": {
+          "bytes": 167666654,
+          "sha256": "f9b67a279283625caee39d61eacb5324243848477b4eb535355eaaa8423d4e09"
+        }
+      },
+      "repo_id": "stabilityai/stable-diffusion-3-medium-diffusers",
+      "revision": "ea42f8cef0f178587cf766dc8129abd379c90671",
+      "access": "Use your own authorized HF account if required; this script never accepts terms."
+    },
+    "worldgym_task": {
+      "path": "assets/task/worldgym_task.pt",
+      "kind": "task",
+      "files": {
+        ".": {
+          "bytes": 323135136,
+          "sha256": "116c8d11a89fc6956404419a341a7f10b535f1279f491b9493e2221dc40fa80c"
+        }
+      }
+    },
+    "worldgym_parent": {
+      "path": "assets/task/worldgym_parent.pt",
+      "kind": "task",
+      "files": {
+        ".": {
+          "bytes": 12278632,
+          "sha256": "282ff87df0b658a67ba6facbf2797ada650372230563bac6f75eca03aa6a831f"
+        }
+      }
+    },
+    "action_stats": {
+      "path": "assets/task/action_stats.json",
+      "kind": "task",
+      "files": {
+        ".": {
+          "bytes": 525,
+          "sha256": "ec1ac0f574b5d321378c83a5a5f1388ba03f14f9540b0edf5f7ffb54cb5d37b0"
+        }
+      }
+    },
+    "proprio": {
+      "path": "assets/task/proprio",
+      "kind": "task",
+      "files": {
+        "linear.pt": {
+          "bytes": 3203,
+          "sha256": "20befb15e5ed76c1313a20b456f73c47fd884b50d86bd258cf75ff6fcc395769"
+        },
+        "mlp_best.pt": {
+          "bytes": 84998,
+          "sha256": "63146081239f4b544672fac7e10492be98cbe204538d155a5b3166457fd0e4e5"
+        }
+      }
+    },
+    "reward_adapter": {
+      "path": "assets/task/reward_adapter",
+      "kind": "task",
+      "files": {
+        "adapter_config.json": {
+          "bytes": 814,
+          "sha256": "2b63fcb9e4f2794803f7bb9083b444918e817888573629a8c508f7426c9f86b6"
+        },
+        "adapter_model.safetensors": {
+          "bytes": 10107280,
+          "sha256": "ad16990a273c6bfb855020492d734c37675faf94a0278686d33b4bd8c9902c80"
+        }
+      }
+    },
+    "task_sft": {
+      "path": "assets/task/sft_selected.pt",
+      "kind": "task",
+      "files": {
+        ".": {
+          "bytes": 206360952,
+          "sha256": "762bb116367d3bef62769872ab6d70825576851cffd3acbf3cea947a793828b8"
+        }
+      }
+    },
+    "normalization": {
+      "path": "assets/task/normalization.json",
+      "kind": "task",
+      "files": {
+        ".": {
+          "bytes": 5745,
+          "sha256": "49eb8ec89d40cafe3d045d75f60dc52a0ce0472a39c1a547109cd47336941e0e"
+        }
+      }
+    },
+    "act_base": {
+      "path": "assets/task/act_base",
+      "kind": "task",
+      "files": {
+        "config.json": {
+          "bytes": 1363,
+          "sha256": "d4f87414ce76a6aa04058f77fa788f76af748a421d268f4948b5bd8a5044400f"
+        },
+        "model.safetensors": {
+          "bytes": 206504484,
+          "sha256": "fbd1aed099e8223c7703282c9af971335cbdd07ca4bc39ba52e4ac0a9b9f13b8"
+        }
+      }
+    },
+    "act_stats": {
+      "path": "assets/task/act_stats.json",
+      "kind": "task",
+      "files": {
+        ".": {
+          "bytes": 3325,
+          "sha256": "0496b23c7c605a88a67eb705af741761bbb12204dddffdeed7c096ad8db21223"
+        }
+      }
+    },
+    "autobio": {
+      "path": "vendor/AutoBio",
+      "kind": "git",
+      "url": "https://github.com/autobio-bench/AutoBio",
+      "revision": "08504213356cbfe9a82bcd33a43cd282945a45df"
+    },
+    "lerobot": {
+      "path": "vendor/lerobot",
+      "kind": "git",
+      "url": "https://github.com/huggingface/lerobot",
+      "revision": "b883328e6c95681ca90a18b102e4ae5e1f91e2bf"
+    },
+    "worldgym_source": {
+      "path": "vendor/world-model-eval",
+      "kind": "git",
+      "url": "https://github.com/world-model-eval/world-model-eval",
+      "revision": "709665b29f5c95124e7dbc05b0d4d47cd353de97"
+    },
+    "decoded": {
+      "path": "assets/decoded",
+      "kind": "decoded_dataset",
+      "dataset": "autobio-bench/pickup-mujoco",
+      "revision": "2efdba33f4910ac1b3ae00461839795f90306d71"
+    }
+  }
+}

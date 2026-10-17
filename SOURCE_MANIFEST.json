@@ -1,0 +1,65 @@
+{
+  "scope": "Two-stage teaching release; original evidence preserved, no new experiments",
+  "files": [
+    {
+      "path": "evidence/observation_example.npz",
+      "sha256": "a1a242b354fe27dd75b5c83def43cc2e0a32ee8bc252af92ca2b1a65e1d602fa",
+      "bytes": 29488
+    },
+    {
+      "path": "evidence/phase1_outcomes.csv",
+      "sha256": "0a325695d8968636d2b0b2609bfd05026910de63246dd3e881c46b67eac3fe77",
+      "bytes": 1415
+    },
+    {
+      "path": "evidence/phase1_summary.json",
+      "sha256": "bcae3fcf5126f93d18a838b7d7b0b47c30b714e3e3375e90ecdbf002ce66aa94",
+      "bytes": 2370
+    },
+    {
+      "path": "evidence/stage2_native_outcomes.csv",
+      "sha256": "045156863a6051edc0a19674e2404e27f133b0d45c4ea297848ef95b1e7c7cab",
+      "bytes": 4957
+    },
+    {
+      "path": "evidence/stage2_native_summary.json",
+      "sha256": "6f213cb452e2b9c9951282b7068351d6b9efee31a5488bc08c758e65ec107b45",
+      "bytes": 1166
+    },
+    {
+      "path": "evidence/stage2_source_records.json",
+      "sha256": "2cab43682e630c05baabb4a72f9c3ec241b812ba3f66c6f8fb3788893b77bbf7",
+      "bytes": 229345
+    },
+    {
+      "path": "media/demos/act_pickup.mp4",
+      "sha256": "08da612be48b07b6a4350e42e1bc193226280524407012dfc7daa258f31d92be",
+      "bytes": 374879
+    },
+    {
+      "path": "media/demos/native_comparison_10demo.mp4",
+      "sha256": "8d85193f8f21d7559175d9ed9208a9708867eb4a03464bd5e2bea21834141cad",
+      "bytes": 2124548
+    },
+    {
+      "path": "media/demos/native_comparison_80demo.mp4",
+      "sha256": "3719182f4361b48b8c0cde392fd72c017998f4328738b7c24017841557dc0c84",
+      "bytes": 2234902
+    },
+    {
+      "path": "media/figures/01_system_v4.png",
+      "sha256": "c78ea591bf10ec6ff0475457de8cf484942ae920862359c27549add8d8cd2709",
+      "bytes": 895094
+    },
+    {
+      "path": "media/figures/native_comparison_10demo.png",
+      "sha256": "cb0f17ab0a39e48ce406057000e1f253bc88cad25928a849dbfcffecb5bbe999",
+      "bytes": 215620
+    },
+    {
+      "path": "media/figures/native_comparison_80demo.png",
+      "sha256": "73bb18197f558c3120f932c2262ea6d27ed1e236d1bc0b906863a295db7d26ba",
+      "bytes": 218016
+    }
+  ]
+}

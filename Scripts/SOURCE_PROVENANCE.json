@@ -1,0 +1,134 @@
+{
+  "status": "PORTABLE_EXTRACTION",
+  "original_sources": {
+    "data_runtime.py": {
+      "source": "experiments/worldgymnast_native_10h_v1/data_runtime.py",
+      "sha256": "5f261919d46e49abd23bfe29f2c134b2a5ff6b2c6e7da016813cf6cbfc8b4e2d",
+      "changes": [
+        "from control import H,R,read,write,sha,now",
+        "sys.path.insert(0,str(R/\"scripts\"));sys.path.insert(0,str(R/\"vendor/lerobot/src\"))",
+        "C=R/\"data/decoded_v1\"",
+        "p=read(R/\"experiments/worldgym_gain_12h_v1/protocol.json\")[\"sft\"]",
+        "str(R/\"experiments/worldgym_gain_12h_v1/checks/INPUT_PROVENANCE_SUPPLEMENT.json\")"
+      ]
+    },
+    "policy_runtime.py": {
+      "source": "experiments/worldgymnast_native_10h_v1/policy_runtime.py",
+      "sha256": "8e7a0144a6ecf61a68a4a1aa91a69e5a490d0b305ed6c99cb9822700e148836e",
+      "changes": [
+        "from control import H,R,read,write,sha,now",
+        "sys.path.insert(0,str(R/\"vendor/lerobot/src\"))",
+        "return {r[\"model\"]:R/r[\"directory\"] for r in read(H/\"DOWNLOADED_ASSETS.json\")[\"models\"]}"
+      ]
+    },
+    "rl_precision.py": {
+      "source": "experiments/worldgymnast_native_10h_v1/rl_precision.py",
+      "sha256": "4be895cd1ed90065ac268a3b5cd58c928f9daeb2b0dac99afa520cdbf145b581",
+      "changes": []
+    },
+    "train_sft.py": {
+      "source": "experiments/worldgymnast_native_10h_v1/train_sft.py",
+      "sha256": "c6bf6d55c2701d4c9fd04046ac47cdaa30c239416b706d3a12b1f5f012922daf",
+      "changes": [
+        "Replace historical path/budget dependencies and log text with portable equivalents; numerical body retained."
+      ]
+    },
+    "trajectory_runtime.py": {
+      "source": "experiments/worldgymnast_native_10h_v1/trajectory_runtime.py",
+      "sha256": "2eadbd6311f00217691bbb6bbfeb993dbee44da2a3fb0c46d2af0c040598350b",
+      "changes": [
+        "assert old[\"policy_hash\"]==actor.run_fingerprint"
+      ]
+    },
+    "train_grpo.py": {
+      "source": "experiments/worldgymnast_native_10h_v1/train_grpo.py",
+      "sha256": "61be78788d1430025b4992639e0f176d6c55ac326c5cc02985b94a5b31130476",
+      "changes": [
+        "ref=Actor(H/\"sft/selected.pt\")"
+      ]
+    },
+    "environment_runtime.py": {
+      "source": "experiments/worldgymnast_native_10h_v1/environment_runtime.py",
+      "sha256": "b17bb3fe39b3b1917b1578c2ff8467725bac0bbdca22c525fc5bd249892b3d18",
+      "changes": [
+        "from control import H,R,read,write,sha,budget",
+        "sys.path.insert(0,str(R/\"scripts\"))\nfrom common import setup_paths\nsetup_paths()",
+        "V5=R/\"experiments/worldgym_v5_policy_ranking_12h\"",
+        "from worldgym_task_full2_cf_v5 import build,install",
+        "from worldgym_known_action_v2 import load_vae,Diffusion",
+        "from worldgym_v5_causal_cache import CachedWorldGym",
+        "from worldgym_v5_proprio_runtime import Proprio",
+        "read(V5/\"configs/native_full2_counterfactual_declaration.json\")[\"training\"]",
+        "checkpoint or V5/\"models/native_full2_cf/best.pt\"",
+        "read(H/\"dyna/COMPLETE.json\")[\"sha256\"] if checkpoint is not None else \"116c8d11a89fc6956404419a341a7f10b535f1279f491b9493e2221dc40fa80c\"",
+        "read(V5/\"configs/action_stats.json\")",
+        "Proprio(V5/\"models/proprio\")",
+        "proof=read(V5/\"metrics/causal_cache_generation_full2_cf_116c8d11.json\")\n        assert proof[\"all_rows_low_error\"] and proof[\"cache_source_sha256\"]==sha(R/\"scripts/worldgym_v5_causal_cache.py\")",
+        "from train_worldgym_v5 import norm_actions"
+      ]
+    },
+    "causal_cache.py": {
+      "source": "scripts/worldgym_v5_causal_cache.py",
+      "sha256": "be9363892c910bd34c879e6fea2c9292ce236ea08782fc3d4fcd6ef23faaa0ef",
+      "changes": [
+        "Import portable core loader; cache calculations unchanged"
+      ]
+    },
+    "world_model.py": {
+      "sources": {
+        "scripts/worldgym_known_action_v2.py": "59480fe307fe87cd90f2c0c7182088f7982d44b58bdfea6f9f4e289bfb748181",
+        "scripts/worldgym_task_lora_v5.py": "85e54ca039aca703c362ac99b1fd5786a707561ff928450119d6f5905bb77ccf",
+        "scripts/worldgym_task_full2_cf_v5.py": "a96cae5824010ff43c7f0e8a0ea9a0c0114ffd3318837bbf906d4ceaaa7a41fb",
+        "scripts/train_worldgym_v5_proprio.py": "69d0e94189697115f8d835d2d1e48b616f25ce16bb6fbd534d6d4c5072b5c673",
+        "scripts/worldgym_v5_proprio_runtime.py": "25b26030a109fe61ea25b610f22f2b5fc36223e3d64ec633e026913d90998c12",
+        "scripts/train_worldgym_v5.py": "89adad2d861df9cfea1f27298507c22fd47e30678197858a98f1f312d589a0eb"
+      },
+      "changes": [
+        "Combine loader/adapter/proprio definitions only; replace historical paths with hash-checked external assets; no missing-VAE download fallback"
+      ]
+    },
+    "reward_adapter_runtime.py": {
+      "sources": {
+        "experiments/worldgymnast_native_10h_v1/reward_adapter_runtime.py": "16c7b140d06a93e8624a2de1ab0c6b1153772421dfb4f506849196f022085a8b",
+        "experiments/worldgymnast_native_10h_v1/reward_7b.py": "0e4d1198b0ce5a652a46bac2b63b97406fe97fcaf549f70b24173167dabea0c1"
+      },
+      "changes": [
+        "Remove unused pilot inheritance; same processor, actual 7B NF4 model, selected QLoRA, prompt, scoring and offload"
+      ]
+    },
+    "autobio_compatibility.patch": {
+      "source": "patches/autobio_compatibility.patch",
+      "sha256": "5f8ca95169ebc328c06c4fd00c0f9b280f6c8a79a916b1cbfdf39726bed90399",
+      "changes": [
+        "Normalize patch headers to Git a/b paths with forward slashes; same two compatibility edits"
+      ]
+    },
+    "train_act.py": {
+      "source": "experiments/worldgym_gain_12h_v1/train_sft.py",
+      "sha256": "00cd88301d72a50d43064660ee0e1302d71c2a5bdba1a203384c0b74a780f37c",
+      "changes": [
+        "Portable paths; fresh run outputs; original training calculation retained; smoke step count explicit"
+      ]
+    },
+    "continue_sft.py": {
+      "source": "experiments/worldgym_mvp_repair_8h_v1/sft_precision.py",
+      "sha256": "cd7c6126e9be358e354a4a88d84828c90143ce59223a79a46b9c9e767fdc5e2d",
+      "changes": [
+        "Portable paths; fresh run outputs; original training calculation retained; smoke step count explicit"
+      ]
+    },
+    "act_data.py": {
+      "source": "scripts/policy_data_rescue.py",
+      "sha256": "7426e07b07fc5eac90852cbf8a6a6d2c560c50442eacb17933c288b0ee9d534e",
+      "changes": [
+        "Portable paths; fresh run outputs; original training calculation retained; smoke step count explicit"
+      ]
+    }
+  },
+  "changes": "Historical budgets and host directories replaced by explicit fresh-run config; numeric evidence untouched. GPU validation is recorded separately.",
+  "portability_fixes": [
+    "ACT config dispatch uses PreTrainedConfig; full checkpoint loading disables unnecessary ImageNet download.",
+    "Continuation computes train-only normalization before constructing the VLA in a new run.",
+    "AutoBio patch verification compares normalized Git-blob text, accepting LF/CRLF without skipping either compatibility edit."
+  ]
+}

@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+outputs/
+runs/
+assets/
+vendor/
+validation/
+*.local.json
+*.zip
+*.pt
+*.safetensors
+.env*

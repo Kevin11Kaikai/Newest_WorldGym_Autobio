@@ -1,0 +1,176 @@
+{
+  "copied_files": [
+    {
+      "path": "evidence/phase1_summary.json",
+      "source": "evidence/phase1_summary.json",
+      "sha256": "bcae3fcf5126f93d18a838b7d7b0b47c30b714e3e3375e90ecdbf002ce66aa94"
+    },
+    {
+      "path": "evidence/phase1_outcomes.csv",
+      "source": "evidence/phase1_outcomes.csv",
+      "sha256": "0a325695d8968636d2b0b2609bfd05026910de63246dd3e881c46b67eac3fe77"
+    },
+    {
+      "path": "evidence/observation_example.npz",
+      "source": "evidence/observation_example.npz",
+      "sha256": "a1a242b354fe27dd75b5c83def43cc2e0a32ee8bc252af92ca2b1a65e1d602fa"
+    },
+    {
+      "path": "media/figures/01_system_v4.png",
+      "source": "media/figures/01_system_v4.png",
+      "sha256": "c78ea591bf10ec6ff0475457de8cf484942ae920862359c27549add8d8cd2709"
+    },
+    {
+      "path": "requirements.txt",
+      "source": "requirements.txt",
+      "sha256": "ddbf2fac1810853e1ad5e6f22d6fafc6111c612062445054854154821f693b7e"
+    },
+    {
+      "path": ".gitignore",
+      "source": ".gitignore",
+      "sha256": "7e35a3963f45b8032fb431f25e7a71b72da85b491d74908d145ef850dbca05c2"
+    },
+    {
+      "path": "Scripts/Dockerfile",
+      "source": "Scripts/Dockerfile",
+      "sha256": "2e6fdd9ed56a305a591bc3c895275cb06b894c3d1c4cff36d2d59dfb541210f1"
+    },
+    {
+      "path": "Scripts/requirements-gpu.txt",
+      "source": "Scripts/requirements-gpu.txt",
+      "sha256": "ade74592db34cc6566115cff11037ea122758053791a0bd1b4f8a9bce92dbc8f"
+    },
+    {
+      "path": "Scripts/configs/assets.json",
+      "source": "Scripts/configs/assets.json",
+      "sha256": "0cabcd3354878774cd36d133b1dead85741e25fa953ca8ab5cd36f9aefd26e27"
+    },
+    {
+      "path": "Scripts/configs/reproduce.json",
+      "source": "Scripts/configs/reproduce.json",
+      "sha256": "ce81a3968d22ca232d18869d84c2293bafde7df24d4650762f827aed6e85ddec"
+    },
+    {
+      "path": "Scripts/evaluate.py",
+      "source": "Scripts/evaluate.py",
+      "sha256": "ac8125bb1a9156084bcd2f4da298c81cf94e8de98f6c7fb0c946d6acc56bcb4a"
+    },
+    {
+      "path": "Scripts/prepare.py",
+      "source": "Scripts/prepare.py",
+      "sha256": "8c7616f4bb017b7f5481f37b3d18f56f8ea28d4bbe4aa9272053ca07a135abc8"
+    },
+    {
+      "path": "Scripts/runtime/act_data.py",
+      "source": "Scripts/runtime/act_data.py",
+      "sha256": "a116e6b9b128b0e7d2cb3b4c845387a8d993747b4e966566b3435a59429be3e6"
+    },
+    {
+      "path": "Scripts/runtime/act_policy.py",
+      "source": "Scripts/runtime/act_policy.py",
+      "sha256": "62632c61c8a7d2c4f5e1f8ad9f59a68d3ae61ffa738850edd52e06d86abbb578"
+    },
+    {
+      "path": "Scripts/runtime/causal_cache.py",
+      "source": "Scripts/runtime/causal_cache.py",
+      "sha256": "6ab0207978bd3029e251516d1a306e8899cec8849cedd3e7abf842b38468ddc0"
+    },
+    {
+      "path": "Scripts/runtime/cli.py",
+      "source": "Scripts/runtime/cli.py",
+      "sha256": "5c2f8d413917dc321d1c6aee1589d9ae961b47839944e40d2febea233b9f3e4b"
+    },
+    {
+      "path": "Scripts/runtime/control.py",
+      "source": "Scripts/runtime/control.py",
+      "sha256": "18229411292a85443adbe8196cf645d09fbffd8e693b53b08b352e6559d84081"
+    },
+    {
+      "path": "Scripts/runtime/data_runtime.py",
+      "source": "Scripts/runtime/data_runtime.py",
+      "sha256": "72e7158ec5b2e09b501d1f32fe224a34e09fee5e19c69b65e029d3dfed9637e0"
+    },
+    {
+      "path": "Scripts/runtime/environment_runtime.py",
+      "source": "Scripts/runtime/environment_runtime.py",
+      "sha256": "fdff606f27f0768172f9cfbf110eb786d03336ed1ef82c4d0780fd9447dd17a3"
+    },
+    {
+      "path": "Scripts/runtime/policy_runtime.py",
+      "source": "Scripts/runtime/policy_runtime.py",
+      "sha256": "e6cf9f9c13442b6f4dd200a995e67c9ea8340d75c33e8ecc66446e7b92955533"
+    },
+    {
+      "path": "Scripts/runtime/reward_adapter_runtime.py",
+      "source": "Scripts/runtime/reward_adapter_runtime.py",
+      "sha256": "cba0b485fc56f1804015c3dd02cb615f8e878c93eb981689b6220146243728fa"
+    },
+    {
+      "path": "Scripts/runtime/rl_precision.py",
+      "source": "Scripts/runtime/rl_precision.py",
+      "sha256": "4be895cd1ed90065ac268a3b5cd58c928f9daeb2b0dac99afa520cdbf145b581"
+    },
+    {
+      "path": "Scripts/runtime/train_act.py",
+      "source": "Scripts/runtime/train_act.py",
+      "sha256": "2a274a7f715aba031f9c5fcca71774fb89b26962a577547b4352a1f1b86be7a3"
+    },
+    {
+      "path": "Scripts/runtime/train_grpo.py",
+      "source": "Scripts/runtime/train_grpo.py",
+      "sha256": "8625362ab8d4812d1d646e1006a4c8097e279fb280f2fd8a411a05036345e3e6"
+    },
+    {
+      "path": "Scripts/runtime/trajectory_runtime.py",
+      "source": "Scripts/runtime/trajectory_runtime.py",
+      "sha256": "a897b48d98fbf51dc27091015cdc0985d70d2a4354f1a584e7405b7f090c63e4"
+    },
+    {
+      "path": "Scripts/runtime/world_model.py",
+      "source": "Scripts/runtime/world_model.py",
+      "sha256": "1879c55bbf02e651e2d4ee8680680bf5bb6e200535f570b6c5681ca3b90d0446"
+    },
+    {
+      "path": "Scripts/sft_act.py",
+      "source": "Scripts/sft_act.py",
+      "sha256": "93d9d913e7061c87623bea49dfdf4f539b1ad5696cf8fcc0183d0dd886b0b5e6"
+    },
+    {
+      "path": "Scripts/SOURCE_PROVENANCE.json",
+      "source": "Scripts/SOURCE_PROVENANCE.json",
+      "sha256": "1a6a7a37356291f7752930e4ff695fe3ac0291d3c6571b43aa262b98d945db65"
+    },
+    {
+      "path": "Scripts/VALIDATION.json",
+      "source": "Scripts/VALIDATION.json",
+      "sha256": "d4848c41a7e227b3426c6a56e852b7d0a207bf04b7097efbebaadd518c15473f"
+    }
+  ],
+  "media_sources": [
+    {
+      "path": "experiments/worldgym_v5_policy_ranking_12h/fresh_reference/development/ea4310c7_seed62259/front_rgb.npy",
+      "sha256": "b484154dd6cf4a0aadea9085d5bcbaaffc64693632dcd4b9a3627000aec1329e"
+    },
+    {
+      "path": "experiments/worldgym_v5_policy_ranking_12h/fresh_reference/development/ea4310c7_seed62259/wrist_rgb.npy",
+      "sha256": "b1fca5b257821839f0b86508c273e8ade3404f67118327699e3f942dbb45f843"
+    },
+    {
+      "path": "experiments/worldgym_v5_policy_ranking_12h/closed_predictions/development_native_full2_cf_step004000_116c8d11_cfg1_cached/ea4310c7_seed62259/generated_rgb.npy",
+      "sha256": "ea731f399c08e806a05a9e6d1c7e1415e01262bdee3b7f2fb65e9eee9c595ac7"
+    },
+    {
+      "path": "experiments/worldgym_v5_policy_ranking_12h/fresh_reference/development/c24fbea8_seed62259/front_rgb.npy",
+      "sha256": "75178e9a8deed452b8ea59e5b6b4e617c6eec84e18babb4f3509ec67cba6bd66"
+    },
+    {
+      "path": "experiments/worldgym_v5_policy_ranking_12h/fresh_reference/development/c24fbea8_seed62259/wrist_rgb.npy",
+      "sha256": "b87d1df7b78010d7e84dba57bbece213a6e37fc6e0ce39018b2c24110d8ddbf5"
+    },
+    {
+      "path": "experiments/worldgym_v5_policy_ranking_12h/closed_predictions/development_native_full2_cf_step004000_116c8d11_cfg1_cached/c24fbea8_seed62259/generated_rgb.npy",
+      "sha256": "278dafcfb161aaa91518e08bef5927bc4235e4998d257b843cc0344b8e9ec8c4"
+    }
+  ],
+  "note": "Existing Stage 1 retained with a corrected Stage 2 handoff. Stage 2 reorganizes verified historical native records. Figures/videos assemble saved pixels; no generative image model or new experiment used."
+}

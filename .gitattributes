@@ -1,0 +1,8 @@
+* text=auto eol=lf
+evidence/** -text
+Scripts/** -text
+requirements.txt -text
+.gitignore -text
+*.png binary
+*.mp4 binary
+*.npz binary

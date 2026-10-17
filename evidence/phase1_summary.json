@@ -1,0 +1,77 @@
+{
+  "scope": "Archived ACT Stage 1; no new policy inference during notebook revision.",
+  "dataset": {
+    "episodes": 100,
+    "frames": 49959,
+    "fps": 50,
+    "train": 80,
+    "validation": 10,
+    "held_out": 10,
+    "ten_demo_is_fixed_subset_of_eighty_train": true
+  },
+  "official_success": "Tube body world z > 0.925 m AND leftfinger-cap contact at official check boundaries; ever-success, not a sustained-grasp guarantee.",
+  "original_20k": {
+    "train10": {
+      "successes": 0,
+      "n": 50
+    },
+    "train80": {
+      "successes": 0,
+      "n": 50
+    },
+    "different_seeds_from_repair": true
+  },
+  "repair": [
+    {
+      "condition": 10,
+      "trained_global_step": 44000,
+      "selected_checkpoint_step": 44000,
+      "successes": 31,
+      "valid_episodes": 50,
+      "technical_exceptions": 0,
+      "wilson95": [
+        0.4815044693099298,
+        0.7413721068980641
+      ],
+      "checkpoint_sha256": "ea4310c794ccc31a4e7af19ca08132b776eb69b970b7c398aa5e81a75a937932"
+    },
+    {
+      "condition": 80,
+      "trained_global_step": 44000,
+      "selected_checkpoint_step": 43000,
+      "successes": 50,
+      "valid_episodes": 50,
+      "technical_exceptions": 0,
+      "wilson95": [
+        0.9286524008666414,
+        1.0
+      ],
+      "checkpoint_sha256": "c24fbea83b261c843e44a2966a6ffb1a23aac97a28906e6b07c5c20dfcf5841f"
+    }
+  ],
+  "local_horizon_probe": {
+    "same_model": true,
+    "development_scenes": 3,
+    "execute10_successes": 0,
+    "execute50_successes": 3,
+    "scope": "Local mechanism only; not attribution of all formal improvements."
+  },
+  "sources": [
+    {
+      "source_project_path": "experiments/act_rescue_v2/metrics/formal_v001_ea4310c7_train10_episodes.jsonl",
+      "source_sha256": "8f80e1479fcc2bf88c2e9e111c3c2988f76a0b3630e144ee70655da52e7d7af4"
+    },
+    {
+      "source_project_path": "experiments/act_rescue_v2/metrics/formal_v001_c24fbea8_train80_episodes.jsonl",
+      "source_sha256": "61964212ea8b6f16136565efa79be808ea55d530843556868c02dd642ab4e923"
+    },
+    {
+      "source_project_path": "phase1_report_rescue_v2.md",
+      "source_sha256": "7e09a08be1a9180c07504febc0653ad5fd3efb58542ac1655d1145feda601c50"
+    },
+    {
+      "source_project_path": "configs/phase1_protocol.json",
+      "source_sha256": "600394904c7842535868df9b645dda0fb3f98b86c1a753f39792789c41480e85"
+    }
+  ]
+}

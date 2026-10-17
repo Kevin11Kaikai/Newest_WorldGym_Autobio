@@ -1,0 +1,187 @@
+{
+  "status": "PASS_PORTABLE_CORE_SMOKE_CHECKS",
+  "utc": "2026-10-15T23:46:02.084332+00:00",
+  "hardware": "RTX 4080 SUPER 16 GB; existing Linux Docker runtime",
+  "scope": "New small engineering runs of the portable scripts using verified existing assets. Not a full historical reproduction or new effectiveness study.",
+  "tests": [
+    {
+      "name": "act_assets",
+      "returncode": 0,
+      "seconds": 0.9801614284515381
+    },
+    {
+      "name": "smolvla_sft",
+      "returncode": 0,
+      "seconds": 51.36550211906433
+    },
+    {
+      "name": "act_sft",
+      "returncode": 0,
+      "seconds": 9.791347742080688
+    },
+    {
+      "name": "fp32_continue",
+      "returncode": 0,
+      "seconds": 29.778650522232056
+    },
+    {
+      "name": "physical_evaluation",
+      "returncode": 0,
+      "seconds": 37.440736293792725
+    },
+    {
+      "name": "act_evaluation",
+      "returncode": 0,
+      "seconds": 20.45368456840515
+    },
+    {
+      "name": "native_evaluation_vlm",
+      "returncode": 0,
+      "seconds": 163.34869647026062
+    },
+    {
+      "name": "native_rl",
+      "returncode": 0,
+      "seconds": 352.04873299598694
+    },
+    {
+      "name": "physical_audit",
+      "returncode": 0,
+      "seconds": 0.25882387161254883
+    },
+    {
+      "name": "fp32_audit",
+      "returncode": 0,
+      "seconds": 0.23222565650939941
+    },
+    {
+      "name": "act_audit",
+      "returncode": 0,
+      "seconds": 0.23486781120300293
+    },
+    {
+      "name": "native_audit",
+      "returncode": 0,
+      "seconds": 0.23807644844055176
+    },
+    {
+      "name": "rl_audit",
+      "returncode": 0,
+      "seconds": 0.32091736793518066
+    }
+  ],
+  "native_rl": {
+    "groups": 1,
+    "trajectories": 4,
+    "frames_per_trajectory": 114,
+    "epochs": 1,
+    "observations_per_trajectory": 2,
+    "actual_weight_update": true,
+    "weights_before": "19dae9ee85952a687d723df263f422cf4d93bf96b3fd32b1aeb7d4fcf84373b1",
+    "weights_after": "5fdeb82625bbfba3269cab5a1b9430d96c184e2539130c8266fdada767532206",
+    "max_rollout_logprob_error": 4.76837158203125e-07,
+    "rewards": [
+      0.2689414322376251,
+      0.531209409236908,
+      0.7057850360870361,
+      0.8933094143867493
+    ]
+  },
+  "cpu_audits": {
+    "physical": {
+      "status": "PASS",
+      "checks": 1
+    },
+    "act_physical": {
+      "status": "PASS",
+      "checks": 1
+    },
+    "native": {
+      "status": "PASS",
+      "checks": 1
+    },
+    "native_rl": {
+      "status": "PASS",
+      "checks": 6
+    },
+    "fp32_continue_v2": {
+      "status": "PASS",
+      "checks": 2
+    }
+  },
+  "portability_contracts": {
+    "status": "PASS",
+    "wrong_checkpoint_rejected": true,
+    "mathematically_identical_AST_components": [
+      "policy_runtime.py:Actor.mean",
+      "policy_runtime.py:Actor.sft_loss",
+      "policy_runtime.py:log_prob",
+      "policy_runtime.py:Actor.physical",
+      "policy_runtime.py:Actor.obs_batch",
+      "rl_precision.py:RLActor",
+      "data_runtime.py:Data.sample",
+      "data_runtime.py:Data.batch",
+      "environment_runtime.py:Physical",
+      "environment_runtime.py:Native.reset",
+      "environment_runtime.py:Native.to",
+      "train_grpo.py:update",
+      "train_grpo.py:optimizer_sample",
+      "train_grpo.py:score_trajectory",
+      "train_sft.py:validate"
+    ],
+    "disjoint_config_roles": true,
+    "no_original_experiment_imports": true,
+    "scope": "Focused CPU contract/provenance checks; not new policy performance evidence."
+  },
+  "cached_episode_decoder": {
+    "status": "PASS",
+    "arrays_identical_to_archived_decode": {
+      "numeric.npz": {
+        "state": 0.0,
+        "actions": 0.0,
+        "timestamps": 0.0
+      },
+      "image.npy": 0,
+      "wrist_image.npy": 0
+    },
+    "resume_checksums_pass": true
+  },
+  "prior_failures_retained_locally": [
+    {
+      "test": "act_sft",
+      "returncode": 1
+    },
+    {
+      "test": "fp32_continue",
+      "returncode": 1
+    }
+  ],
+  "portability_fixes": [
+    "Normalize and verify the two AutoBio compatibility edits across LF/CRLF.",
+    "Use generic LeRobot config dispatch for ACT checkpoint loading.",
+    "Prepare continuation normalization before constructing a policy in a new run."
+  ],
+  "not_executed": [
+    "Fresh Docker image build and public-network downloads",
+    "Full 10,000/15,000-step retraining",
+    "Full historical final matrices",
+    "Portable Dyna/TTT orchestration"
+  ],
+  "non_numerical_post_smoke_checks": "Named asset checksum enforcement, ACT config identity and completed run-state writing were tightened after the first smoke launches; CPU contracts verify asset rejection. Numerical runtime components remain identical.",
+  "portable_numerical_source_sha256": {
+    "act_data.py": "a116e6b9b128b0e7d2cb3b4c845387a8d993747b4e966566b3435a59429be3e6",
+    "act_policy.py": "62632c61c8a7d2c4f5e1f8ad9f59a68d3ae61ffa738850edd52e06d86abbb578",
+    "causal_cache.py": "6ab0207978bd3029e251516d1a306e8899cec8849cedd3e7abf842b38468ddc0",
+    "continue_sft.py": "1eadbccdc5484e0e615702f9d9c493b6f529c287608bcab825d20afa2b967e6a",
+    "data_runtime.py": "72e7158ec5b2e09b501d1f32fe224a34e09fee5e19c69b65e029d3dfed9637e0",
+    "environment_runtime.py": "fdff606f27f0768172f9cfbf110eb786d03336ed1ef82c4d0780fd9447dd17a3",
+    "policy_runtime.py": "e6cf9f9c13442b6f4dd200a995e67c9ea8340d75c33e8ecc66446e7b92955533",
+    "reward_adapter_runtime.py": "cba0b485fc56f1804015c3dd02cb615f8e878c93eb981689b6220146243728fa",
+    "rl_precision.py": "4be895cd1ed90065ac268a3b5cd58c928f9daeb2b0dac99afa520cdbf145b581",
+    "train_act.py": "2a274a7f715aba031f9c5fcca71774fb89b26962a577547b4352a1f1b86be7a3",
+    "train_grpo.py": "8625362ab8d4812d1d646e1006a4c8097e279fb280f2fd8a411a05036345e3e6",
+    "train_sft.py": "924f3585bcb45d612bf985ede16e16cc2d5584b7ed2df922c2cc41d6538c9ef7",
+    "trajectory_runtime.py": "a897b48d98fbf51dc27091015cdc0985d70d2a4354f1a584e7405b7f090c63e4",
+    "world_model.py": "1879c55bbf02e651e2d4ee8680680bf5bb6e200535f570b6c5681ca3b90d0446"
+  }
+}

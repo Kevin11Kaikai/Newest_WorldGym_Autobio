@@ -1,0 +1,35 @@
+{
+  "scope": "Historical development diagnostic; two fixed ACT policies on ten common starts",
+  "generator": "development_native_full2_cf_step004000_116c8d11_cfg1_cached",
+  "policy_results": [
+    {
+      "policy": "10-demo ACT",
+      "mujoco_success": 8,
+      "native_command_replay_success": 0,
+      "scenes": 10
+    },
+    {
+      "policy": "80-demo ACT",
+      "mujoco_success": 10,
+      "native_command_replay_success": 0,
+      "scenes": 10
+    }
+  ],
+  "seeds": [
+    62259,
+    79362,
+    233558,
+    339953,
+    354189,
+    801020,
+    829465,
+    950635,
+    984129,
+    997509
+  ],
+  "interpretation": "Native actions were generated closed-loop from predicted observations, then replayed open-loop in MuJoCo. These are not calibrated evaluation probabilities.",
+  "source_check": "Policy and seed identities matched; saved commands hash and replay controls matched; saved replay success flags recounted.",
+  "new_inference": false,
+  "visual_example_rule": "Smallest numeric shared seed: 62259; fixed frame indices 0, 50, 100 at 0, 10, 20 seconds.",
+  "training_scope": "Task-adapted WorldGym checkpoint; not a zero-shot unseen-environment test."
+}
