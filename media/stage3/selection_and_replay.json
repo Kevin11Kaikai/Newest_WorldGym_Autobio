@@ -1,0 +1,35 @@
+{
+  "selection_rule": "First seed in frozen order for each outcome; world-model outcomes are reward proxies.",
+  "selection": {
+    "sim_success": 920100,
+    "sim_failure": 920118,
+    "wm_success": 920100,
+    "wm_failure": 920101
+  },
+  "replays": [
+    {
+      "seed": 920100,
+      "observation_max_abs_error": 0.0,
+      "reward_max_abs_error": 0.0,
+      "original_sha256": "82ec224303e7dc7e203cd56e012abefd13ec9ff076393dc138bc8fa77ecd8a08",
+      "urdf": "{PACKAGE_ASSET_DIR}/descriptions/panda_v2.urdf",
+      "frames": 201
+    },
+    {
+      "seed": 920101,
+      "observation_max_abs_error": 0.0,
+      "reward_max_abs_error": 0.0,
+      "original_sha256": "02f239e1284b043d41d19d81b679d41db58a66441ed6b69d17b7a70831fd2dd6",
+      "urdf": "{PACKAGE_ASSET_DIR}/descriptions/panda_v2.urdf",
+      "frames": 201
+    },
+    {
+      "seed": 920118,
+      "observation_max_abs_error": 0.0,
+      "reward_max_abs_error": 0.0,
+      "original_sha256": "57e3e8210f1903b1ddc1ecc3df4f26f65d7beb3bf4cef75ea8f08ca341c8a1e3",
+      "urdf": "{PACKAGE_ASSET_DIR}/descriptions/panda_v2.urdf",
+      "frames": 201
+    }
+  ]
+}

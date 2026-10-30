@@ -1,5 +1,5 @@
 {
-  "scope": "Two-stage teaching release; original evidence preserved, no new experiments",
+  "scope": "Three-stage teaching release; original tube evidence preserved, stage 3 adds the saved PickCube paired evaluation",
   "files": [
     {
       "path": "evidence/observation_example.npz",
@@ -60,6 +60,196 @@
       "path": "media/figures/native_comparison_80demo.png",
       "sha256": "95ff7b65b90fdf28146361d03172dbda136a8b57fa3aaa2f20b886bfab254635",
       "bytes": 572315
+    },
+    {
+      "path": "evidence/stage3/920100.npz",
+      "sha256": "82ec224303e7dc7e203cd56e012abefd13ec9ff076393dc138bc8fa77ecd8a08",
+      "bytes": 219468
+    },
+    {
+      "path": "evidence/stage3/920101.npz",
+      "sha256": "02f239e1284b043d41d19d81b679d41db58a66441ed6b69d17b7a70831fd2dd6",
+      "bytes": 218925
+    },
+    {
+      "path": "evidence/stage3/920102.npz",
+      "sha256": "6f05f038e208cded7ed47c6f8631b551da2544aa3d720d1c9784273e50ad70fb",
+      "bytes": 220478
+    },
+    {
+      "path": "evidence/stage3/920103.npz",
+      "sha256": "ee40b2f9f6b6c3f2c3ee2009a00420df5fa76944ac1940c715632c49011ab0d9",
+      "bytes": 219322
+    },
+    {
+      "path": "evidence/stage3/920104.npz",
+      "sha256": "1a4b1f779d12608f79461dc4689847bd486b894455a00d5f50e748b363169e40",
+      "bytes": 219561
+    },
+    {
+      "path": "evidence/stage3/920105.npz",
+      "sha256": "0520a3d9f2bc6fc5dc8b723a9bd659bd913b0341a10e6ac14f0a25fe63e7d3d2",
+      "bytes": 218948
+    },
+    {
+      "path": "evidence/stage3/920106.npz",
+      "sha256": "15d75f527716f9620756c181f138e9ba6d30f96288bf485fadff792063980617",
+      "bytes": 219587
+    },
+    {
+      "path": "evidence/stage3/920107.npz",
+      "sha256": "6ce03cc49f695a338d1485f5e7e3716380c007a7a4131259776361c8a0eee636",
+      "bytes": 219654
+    },
+    {
+      "path": "evidence/stage3/920108.npz",
+      "sha256": "8e8bbfec62f7cac9eb6708faaf8779d03d31486016fdb28ac2bc38b2e52c2c91",
+      "bytes": 219790
+    },
+    {
+      "path": "evidence/stage3/920109.npz",
+      "sha256": "521287a3c38f84042ea0c3cce9f815d54e3d45c130b0d66c47e9c9ddcfe1a846",
+      "bytes": 220084
+    },
+    {
+      "path": "evidence/stage3/920110.npz",
+      "sha256": "5871c3af467a4eb69175bc612c4c5712d592508a22d6cccb5f4196398fa8371b",
+      "bytes": 218895
+    },
+    {
+      "path": "evidence/stage3/920111.npz",
+      "sha256": "a3f7fd909413853d9de0d8401439e320fb8ee9feac7cf90e4911967f4030cf18",
+      "bytes": 219440
+    },
+    {
+      "path": "evidence/stage3/920112.npz",
+      "sha256": "fb3fc96e235515531c03fec6eeb03b2dbdf6076899c7d2fc3eb091d8897d8d6f",
+      "bytes": 219427
+    },
+    {
+      "path": "evidence/stage3/920113.npz",
+      "sha256": "458ddbd7de60fa055c13ebe7419c7eff35a5eeb3b3b79e091e9327fe2a04073d",
+      "bytes": 219143
+    },
+    {
+      "path": "evidence/stage3/920114.npz",
+      "sha256": "754d270402a1598c1243a37e0b2db254f286278066d348ef8524ddd68a48205e",
+      "bytes": 220212
+    },
+    {
+      "path": "evidence/stage3/920115.npz",
+      "sha256": "2abd65b15d4d536d79efd56ec68faaec1da098de07753d01698c30270999176a",
+      "bytes": 219087
+    },
+    {
+      "path": "evidence/stage3/920116.npz",
+      "sha256": "45b970073cba2b403a9ec992a72d61b49dabfd3fe9eec7a22e598319f5f88283",
+      "bytes": 219109
+    },
+    {
+      "path": "evidence/stage3/920117.npz",
+      "sha256": "2da32ea315d1d576d3ecb4a30d3eee9dde080f865125d06e1783c54e05650969",
+      "bytes": 220453
+    },
+    {
+      "path": "evidence/stage3/920118.npz",
+      "sha256": "57e3e8210f1903b1ddc1ecc3df4f26f65d7beb3bf4cef75ea8f08ca341c8a1e3",
+      "bytes": 221712
+    },
+    {
+      "path": "evidence/stage3/920119.npz",
+      "sha256": "c0496b5675a9a05b4be9ee737da837ac253312bae8dfaa67b83ba493bceccb35",
+      "bytes": 219686
+    },
+    {
+      "path": "evidence/stage3/summary.json",
+      "sha256": "5f4de3c5dbf3cf9d7b89f2bceec2c1b700b7b53a4cf824aba73a7b3c082b1141",
+      "bytes": 11769
+    },
+    {
+      "path": "media/stage3/overview_tdmpc2_symbols_en.png",
+      "sha256": "3b32e568a6c898e2a2d6b8ec281f9b0359f43cd0cb40ea01f3aa8d531d772589",
+      "bytes": 1849500
+    },
+    {
+      "path": "media/stage3/overview_worldgym_en.png",
+      "sha256": "407b4703967bfcf6c5db72c9c113e6bc0badd2eb47b5c6cadf5bd76a22971bf2",
+      "bytes": 1692571
+    },
+    {
+      "path": "media/stage3/same_policy_two_environments_en.png",
+      "sha256": "030ac9ead5103ba7a7a94902006be817dd1393bb32a18d5d918220c844bf71c4",
+      "bytes": 1695431
+    },
+    {
+      "path": "media/stage3/selection_and_replay.json",
+      "sha256": "17f07448c05d13d13b77f2d3f632a4602035b5ae6768801bd991725869b8815b",
+      "bytes": 1118
+    },
+    {
+      "path": "media/stage3/sim_failure.mp4",
+      "sha256": "d4959cd4f47f8bd98af50a538f7184b4103aa4f740dcb28aeffff0a054bc0d49",
+      "bytes": 787803
+    },
+    {
+      "path": "media/stage3/sim_failure_timeline.jpg",
+      "sha256": "ae387a7b36c5048a945f7b71ec2df9d772d01b87e303950a2cf187e0f8fb76d1",
+      "bytes": 152603
+    },
+    {
+      "path": "media/stage3/sim_for_wm_failure.mp4",
+      "sha256": "0c84916bcc39d126aa43221424ce6808794671488ebf69b25ac4c156a2e0c3f8",
+      "bytes": 640190
+    },
+    {
+      "path": "media/stage3/sim_for_wm_failure_timeline.jpg",
+      "sha256": "f01f6ae571c0daf4d8a06dc2808c19153d1d693f9760694c882bbf720ec679e2",
+      "bytes": 153870
+    },
+    {
+      "path": "media/stage3/sim_success.mp4",
+      "sha256": "48946be1441a0a0ba61ceaef963bad95d70ff6fff00dd71fdb351687739dfe6f",
+      "bytes": 602959
+    },
+    {
+      "path": "media/stage3/sim_success_second.mp4",
+      "sha256": "373150f033b2dff8b67aa2a4b23ab5599a9689a7725c47af562331109f82e9d9",
+      "bytes": 631325
+    },
+    {
+      "path": "media/stage3/sim_success_second_timeline.jpg",
+      "sha256": "eb73b41a81ff9cbf06295262423e5038ce24b7ab4588fe9a7ef205a703872f11",
+      "bytes": 146456
+    },
+    {
+      "path": "media/stage3/sim_success_timeline.jpg",
+      "sha256": "461ec61d9aa15793e4a6aaceb20fa94aa709f0b1823290424b35057d0431d7b5",
+      "bytes": 150797
+    },
+    {
+      "path": "media/stage3/star_extra_replay.json",
+      "sha256": "d557d115da9572ef9f5966915b92c791dc705f5de94671fbfc1424c9aa6c45cf",
+      "bytes": 557
+    },
+    {
+      "path": "media/stage3/wm_failure_animation.mp4",
+      "sha256": "1257203033a2d829900ffd98b9671bb225ed323196ad6750a63942665ed0bd4b",
+      "bytes": 577542
+    },
+    {
+      "path": "media/stage3/wm_shared_failure_animation.mp4",
+      "sha256": "04e758aaa2427b00df3ed8b41572f2ecd1886f8a5c324c2c679f1397c5b8a3b9",
+      "bytes": 666855
+    },
+    {
+      "path": "media/stage3/wm_success_animation.mp4",
+      "sha256": "844a7ab5b05827abf46dca59ba8b5ab8c9f3505a6cb8997a3592ec13f3dcdeb0",
+      "bytes": 365509
+    },
+    {
+      "path": "media/stage3/wm_success_second_animation.mp4",
+      "sha256": "2dd80c69cb9285e68d361a425357d2a9700c36d0a2660fa860b76f1a09f00f4c",
+      "bytes": 537553
     }
   ]
 }

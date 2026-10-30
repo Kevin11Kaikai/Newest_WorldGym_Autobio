@@ -1,0 +1,16 @@
+{
+  "selection_rule": "Second joint simulator-success/model-proxy-success in frozen seed order; original actions replayed through all preceding seeds to preserve reset context.",
+  "selection": {
+    "second_joint_success": 920102
+  },
+  "replays": [
+    {
+      "seed": 920102,
+      "observation_max_abs_error": 0.0,
+      "reward_max_abs_error": 0.0,
+      "original_sha256": "6f05f038e208cded7ed47c6f8631b551da2544aa3d720d1c9784273e50ad70fb",
+      "urdf": "{PACKAGE_ASSET_DIR}/descriptions/panda_v2.urdf",
+      "frames": 201
+    }
+  ]
+}
