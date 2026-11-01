@@ -13,7 +13,7 @@ def main():
     count=verify_assets()
     evidence=check_stage_evidence()
     files=sorted(R.glob('*.ipynb'))
-    assert [p.name for p in files]==['01_act_imitation_learning.ipynb','02_worldgym_policy_evaluation.ipynb','03_latent_pickcube_policy_evaluation.ipynb']
+    assert [p.name for p in files]==['01_act_imitation_learning.ipynb','02_worldgym_policy_evaluation.ipynb','03_latent_pickcube_policy_evaluation.ipynb','04_latent_tube_policy_evaluation.ipynb']
     result=[]
     for path in files:
         nb=nbformat.read(path,as_version=4);start=time.perf_counter()

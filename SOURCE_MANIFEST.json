@@ -1,5 +1,5 @@
 {
-  "scope": "Three-stage teaching release; original tube evidence preserved, stage 3 adds the saved PickCube paired evaluation",
+  "scope": "Four-stage teaching release; stage 4 adds the saved test-tube latent comparison after the PickCube stage",
   "files": [
     {
       "path": "evidence/observation_example.npz",
@@ -250,6 +250,156 @@
       "path": "media/stage3/wm_success_second_animation.mp4",
       "sha256": "2dd80c69cb9285e68d361a425357d2a9700c36d0a2660fa860b76f1a09f00f4c",
       "bytes": 537553
+    },
+    {
+      "path": "media/stage4/10290200_trace.npz",
+      "sha256": "2563a303a42ee835ebd9e59b0ad42ef3c7f54a7ec097ffabd8751264f1dfe753",
+      "bytes": 34408
+    },
+    {
+      "path": "media/stage4/10290201_trace.npz",
+      "sha256": "725e4645b5422bb1ce5c0709186d4b7478b57151383bd42e8c746981027595c5",
+      "bytes": 38131
+    },
+    {
+      "path": "media/stage4/10290212_trace.npz",
+      "sha256": "e47f206941481e008fadf702fb6193340623bd94331bf3d50338e1d1df42742b",
+      "bytes": 81351
+    },
+    {
+      "path": "media/stage4/10290298_trace.npz",
+      "sha256": "6fb3c5fda12a1b70266f568b2ee11644fbc6ae0ed56d32932f41cacc9b7d12e8",
+      "bytes": 80994
+    },
+    {
+      "path": "media/stage4/cases/10290200.npz",
+      "sha256": "78fcb8d9ae29f322b24ce5f02068fa77d9760dc3ad6d6fd0f6bdd985970a87f1",
+      "bytes": 1914
+    },
+    {
+      "path": "media/stage4/cases/10290201.npz",
+      "sha256": "ffb919f88936cc3ae7159913b03bdcaa8ee9cb4d9671e70ac862e0932139c2ec",
+      "bytes": 2195
+    },
+    {
+      "path": "media/stage4/cases/10290212.npz",
+      "sha256": "0068e36a32b76f81db53b562c00ba175beefccbd497d7aa70e16d290c64398ef",
+      "bytes": 2840
+    },
+    {
+      "path": "media/stage4/cases/10290298.npz",
+      "sha256": "babb9a8e6e516f3f39de43a3c430113b2a3e2edf550b40e77ea40782caecea75",
+      "bytes": 2913
+    },
+    {
+      "path": "media/stage4/manifest.json",
+      "sha256": "3335cc700b1dce6fb67e5ae2266a42dae2f4dc633f7ed4c7659aa5c0312bfce6",
+      "bytes": 2432
+    },
+    {
+      "path": "media/stage4/sim_failure.mp4",
+      "sha256": "e4f17f43f3e510cc34990a580911ad8c2ae58a5f0bcc44d2c1f0cc66f6d5a7a7",
+      "bytes": 2823385
+    },
+    {
+      "path": "media/stage4/sim_failure_timeline.jpg",
+      "sha256": "4db6225c9a60a1ba998d15cf90e93eb100f88c9009dd2d5d3cd67954f248bb06",
+      "bytes": 368188
+    },
+    {
+      "path": "media/stage4/sim_for_model_success.mp4",
+      "sha256": "a63ff28977f3b7a5e7334b3e6e87664ae98d2bf193d64b6d7411f77e321054b8",
+      "bytes": 2754057
+    },
+    {
+      "path": "media/stage4/sim_for_model_success_timeline.jpg",
+      "sha256": "373beede1bcfda51933260800740624a3f8dacc82278274a1813ad05447979e5",
+      "bytes": 369374
+    },
+    {
+      "path": "media/stage4/sim_for_wm_failure.mp4",
+      "sha256": "0106766aca1a7141ba0a81afdf96eeb3df68e41cfa5b8cb3b669b12e55824902",
+      "bytes": 2066965
+    },
+    {
+      "path": "media/stage4/sim_for_wm_failure_timeline.jpg",
+      "sha256": "1a5427202d80fae3624e84a7691ae1fce18bf93b99f6842f47ee3dacfc1614e4",
+      "bytes": 396142
+    },
+    {
+      "path": "media/stage4/sim_success.mp4",
+      "sha256": "45f677821a2d7b5c1d7ed630d24a47e6abc428685822b8702e69ab7d440f61e0",
+      "bytes": 877095
+    },
+    {
+      "path": "media/stage4/sim_success_timeline.jpg",
+      "sha256": "7bc8ac2edaec16a169292440fa50c27d350b3f7ba589dfe9fb0779e0ecc97da2",
+      "bytes": 380883
+    },
+    {
+      "path": "media/stage4/summary.json",
+      "sha256": "39145bd1ede70af5ae5d37cc07da01a2d3f06b07a3089fca753ef431e2bc1505",
+      "bytes": 10216
+    },
+    {
+      "path": "media/stage4/tube_dynamics_lessons_en.png",
+      "sha256": "0a06217f26ccdd6589c3b5d531a95f6130dfb4b5b7a8471214cdcfd5d9f04443",
+      "bytes": 125310
+    },
+    {
+      "path": "media/stage4/tube_four_outcomes_en.png",
+      "sha256": "271f9b247b3f5530033c704858340f3624171f65797c106b1e6e15a83bba780b",
+      "bytes": 102454
+    },
+    {
+      "path": "media/stage4/tube_one_packet_en.png",
+      "sha256": "c086ce4935c89d553e4bd2c27633c2fb4fb3ee99f54646d5e0f05438819d0141",
+      "bytes": 96273
+    },
+    {
+      "path": "media/stage4/tube_paired_results_explained_v1.png",
+      "sha256": "6d7674ef3e8d14c5b65476779137ae2713200cb0cb0943a6c709a97024635203",
+      "bytes": 1610151
+    },
+    {
+      "path": "media/stage4/tube_same_policy_two_environments_v1.png",
+      "sha256": "aa34c7cbdabaa8bf8d84447c702618817e70ea4cdd2b4831d26e074fd1f290fd",
+      "bytes": 1730935
+    },
+    {
+      "path": "media/stage4/tube_teacher_to_evaluation_v1.png",
+      "sha256": "5d6df76db1843a4509372f66bb32dc6e99f116bb96615d28734cc2e3709463f3",
+      "bytes": 1877980
+    },
+    {
+      "path": "media/stage4/tube_two_loops_en.png",
+      "sha256": "01b0b2fa58c34180473ab7291bec3da4c777dc4735925426e90800f9c71804dd",
+      "bytes": 129951
+    },
+    {
+      "path": "media/stage4/tube_world_model_overview_v1.png",
+      "sha256": "973a4c79372080bb0162d6c92c5070717a69434ef34e330726a70f9e4d9373be",
+      "bytes": 1676778
+    },
+    {
+      "path": "media/stage4/wm_failure_animation.mp4",
+      "sha256": "3c2e2ede276be6e070cdbd407fe4745815c823bfa5edd4787e12b5c42fbb0786",
+      "bytes": 689677
+    },
+    {
+      "path": "media/stage4/wm_imagined_success_animation.mp4",
+      "sha256": "0ea4aaa658d0a2ffdb54ba903a690e4ecd5b3fa0d7812e9ac129bbcb680f4244",
+      "bytes": 316994
+    },
+    {
+      "path": "media/stage4/wm_shared_failure_animation.mp4",
+      "sha256": "897b06ec600299b88f689bf538520b5115366b49f3a878aecc94296ff97638af",
+      "bytes": 576797
+    },
+    {
+      "path": "media/stage4/wm_success_animation.mp4",
+      "sha256": "513765e5eb927f52ce2e08279dee7717947fdc6afe4663c4f53ea849cef2e32f",
+      "bytes": 289583
     }
   ]
 }
