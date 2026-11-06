@@ -71,7 +71,11 @@ class ResidualPolicy(nn.Module):
         radius = self.radius * (self.bounds[:6, 1] - self.bounds[:6, 0])
         low = torch.maximum((self.bounds[:6, 0] - base[..., :6]).amax(-2), -radius)
         high = torch.minimum((self.bounds[:6, 1] - base[..., :6]).amin(-2), radius)
-        return (low + high) / 2, (high - low) / 2
+        half = (high - low) / 2
+        # Numerically collapsed axes must also be deterministic when EXECUTED,
+        # not merely omitted from the density. Keep the feasible midpoint.
+        half = torch.where(half > 1e-12, half, 0.)
+        return (low + high) / 2, half
 
     def log_prob(self, state, u, half):
         mean = self(state)

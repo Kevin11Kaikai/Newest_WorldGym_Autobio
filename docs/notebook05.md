@@ -82,7 +82,8 @@ Gaussian through tanh into that interval. No clipping occurs after sampling;
 an out-of-bounds original command is rejected rather than silently altered.
 
 Log probability includes the tanh and interval Jacobians and sums over active
-joint dimensions. Zero-width dimensions are deterministic and excluded. The
+joint dimensions. Intervals with half-width at most 1e-12 collapse to their
+feasible midpoint in both execution and likelihood. These deterministic axes are excluded. The
 PPO-style ratio is the **joint packet probability**, not seven separate token
 ratios. Per-episode means mask padded packets before averaging episodes.
 Population-standard-deviation group advantages become exactly zero for constant

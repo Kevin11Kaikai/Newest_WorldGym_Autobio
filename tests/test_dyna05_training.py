@@ -80,13 +80,16 @@ def test_exact_executed_density_and_gripper_preservation():
 
 def test_feasible_intersection_and_deterministic_axes():
     p = policy()
-    base = np.zeros((10, 7)); base[0, 0] = 1.; base[1, 0] = -1.; base[:, 1] = 1.
     rng = torch.Generator().manual_seed(20)
-    for _ in range(100):
-        packet, trace = p.sample([.91], base, rng)
-        assert trace['half'][0] == 0 and torch.isfinite(trace['old_logp'])
-        np.testing.assert_array_equal(packet[:, 0], base[:, 0])
-        assert (packet <= 1).all() and (packet >= -1).all()
+    for slack in (0., 1e-13):
+        base = np.zeros((10, 7)); base[0, 0] = 1.; base[1, 0] = -1. + slack; base[:, 1] = 1.
+        center, half = p.interval(torch.tensor(base))
+        assert half[0] == 0
+        for _ in range(100):
+            packet, trace = p.sample([.91], base, rng)
+            assert trace['half'][0] == 0 and torch.isfinite(trace['old_logp'])
+            np.testing.assert_array_equal(packet[:, 0], base[:, 0] + float(center[0]))
+            assert (packet <= 1).all() and (packet >= -1).all()
 
 
 def test_out_of_bound_baseline_rejected_without_clipping():
