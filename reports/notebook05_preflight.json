@@ -1,0 +1,13 @@
+{
+  "status": "BLOCKED",
+  "blockers": [
+    "policy_checkpoint: path not supplied",
+    "world_model_checkpoint: path not supplied",
+    "state_action_schema: path not supplied",
+    "training_seed_manifest: path not supplied",
+    "bridge_source: path not supplied",
+    "dependency missing: torch",
+    "dependency missing: mujoco",
+    "Original Stage 4 controller/model class definitions and normalizers are not supplied"
+  ]
+}

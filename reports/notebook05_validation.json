@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "assets": 80,
+  "evidence": {
+    "stage1_scenes": 50,
+    "stage2_development_scenes": 10,
+    "status": "PASS_SAVED_RECORD_CHECKS",
+    "new_inference": false
+  },
+  "notebooks": [
+    {
+      "notebook": "01_act_imitation_learning.ipynb",
+      "status": "PASS",
+      "executor": "inprocess",
+      "code_cells": 2,
+      "seconds": 1.1245239849995414
+    },
+    {
+      "notebook": "02_worldgym_policy_evaluation.ipynb",
+      "status": "PASS",
+      "executor": "inprocess",
+      "code_cells": 1,
+      "seconds": 1.0188313389999166
+    },
+    {
+      "notebook": "03_latent_pickcube_policy_evaluation.ipynb",
+      "status": "PASS",
+      "executor": "inprocess",
+      "code_cells": 15,
+      "seconds": 1.9563368230001288
+    },
+    {
+      "notebook": "04_latent_tube_policy_evaluation.ipynb",
+      "status": "PASS",
+      "executor": "inprocess",
+      "code_cells": 15,
+      "seconds": 2.728168913000445
+    },
+    {
+      "notebook": "05_dyna_style_closed_loop.ipynb",
+      "status": "PASS",
+      "executor": "inprocess",
+      "code_cells": 7,
+      "seconds": 2.980762906000564
+    }
+  ],
+  "new_inference": false,
+  "audit_date": "2026-11-06",
+  "real_mujoco_experiment_executed": false,
+  "independent_tests": 28,
+  "original_stage4_assets_available": false,
+  "plot_visual_inspection": "PASS: historical confusion matrix inspected",
+  "html_preview": "Exported; browser inspection unavailable because Chromium is not installed",
+  "standard_kernel_transport": "Blocked by host socket restrictions; actual cells executed in fresh IPython processes",
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "ipykernel": "7.4.0",
+    "pytest": "9.2.0"
+  }
+}
