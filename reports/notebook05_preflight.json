@@ -6,8 +6,10 @@
     "state_action_schema: path not supplied",
     "training_seed_manifest: path not supplied",
     "bridge_source: path not supplied",
-    "dependency missing: torch",
-    "dependency missing: mujoco",
     "Original Stage 4 controller/model class definitions and normalizers are not supplied"
-  ]
+  ],
+  "installed_dependencies": {
+    "torch": "2.6.0+cpu",
+    "mujoco": "3.3.0"
+  }
 }

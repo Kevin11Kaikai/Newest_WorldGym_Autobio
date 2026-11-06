@@ -12,12 +12,13 @@ This independent project uses the AutoBio MuJoCo task and WorldGym. The notebook
 | [02 · Can Native WorldGym Evaluate Our ACT Policies?](02_worldgym_policy_evaluation.ipynb) | Can generated future observations support evaluation of fixed ACT policies? | On ten shared development starts, MuJoCo feedback gives **8/10 and 10/10**; replaying the actions from the native observation loops gives **0/10 for both** |
 | [03 · Can a latent world model be compared with its simulator?](03_latent_pickcube_policy_evaluation.ipynb) | Without generating future images, can one frozen policy be evaluated in a latent model and in its simulator? | On PickCube, simulator official success is **19/20** and the reward proxy is **17/20** |
 | [04 · The latent comparison, now on test-tube grasp](04_latent_tube_policy_evaluation.ipynb) | Can that same comparison judge the frozen test-tube controller? | MuJoCo records **90/100** actual successes. The model calls success on **95/100**. The judgments match on **87/100**. 95 is not a higher policy score |
-| [05 · A Dyna-style closed loop](05_dyna_style_closed_loop.ipynb) | Can model-assisted candidate search survive actual simulator feedback? | Implemented and CPU-tested candidate search, reward correction and paired evaluation; **new MuJoCo run blocked by missing Stage 4 source/checkpoints** |
+| [05 · A Dyna-style closed loop](05_dyna_style_closed_loop.ipynb) | Can GRPO plus latent dynamics updates improve actual tube success? | Implemented and CPU-tested GRPO, latent fine-tuning, matched control and paired evaluation; **new MuJoCo run blocked by missing Stage 4 source/checkpoints** |
 
-Notebook 05 reuses the existing protocol and adds executable feedback logic. Its
-minimal policy update is bounded candidate search, and its model update is a
-success-reward correction head; latent dynamics remain frozen. It does not claim
-GRPO or new simulator success rates. See [run instructions](docs/notebook05.md)
+Notebook 05 now implements a bounded GRPO → simulator feedback → latent dynamics
+fine-tuning → GRPO round, including an equal-compute frozen-model control and
+fixed-start actual evaluation. The existing notebook was extended; no new
+notebook was added. Real AutoBio training and before/after success rates await
+the original Stage 4 source/checkpoint bundle. See [run instructions](docs/notebook05.md)
 and the [feasibility record](reports/notebook05_feasibility.md).
 
 The second-stage checkpoint is task-adapted WorldGym. Native future camera images come from the video model, not CAD rendering. A separate learned model supplies joint observations.
@@ -40,10 +41,10 @@ Stage 4 asks Stage 3's question for the frozen test-tube controller. On seeds 10
 
 Read the saved notebook outputs, or run:
 
-    python -m pip install -r requirements-notebook05.txt
+    python -m pip install -r requirements-notebook05-training.txt
     python tools/verify_notebooks.py
 
-This checks bundled hashes, per-scene records and all five notebooks in fresh CPU kernels. Notebook 05 also runs its independent contract tests. It does not rerun training or simulation.
+This checks bundled hashes, per-scene records and all five notebooks in fresh CPU kernels. Notebook 05 also runs its independent contract tests. Its optimizer tests train explicitly labelled synthetic fixtures; it does not rerun original AutoBio training or simulation.
 
 GPU entrypoints are in [Scripts/README.md](Scripts/README.md). They reuse the previous portable ACT training/evaluation code. The task checkpoint bundle is **not published**, so a fresh clone supports CPU verification after dependency installation; GPU runs require matching external assets. The portable entries are not a one-command reconstruction of every historical experiment.
 

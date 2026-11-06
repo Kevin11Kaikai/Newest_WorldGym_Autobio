@@ -23,6 +23,6 @@
   "bridge_source": {
     "path": null,
     "sha256": null,
-    "description": "Original architecture adapter: build(resources, schema) returns simulator, controller, world_model; see docs/notebook05.md"
+    "description": "Original architecture adapter: build(resources, schema) returns simulator, controller, world_model, and original trainable_model; see docs/notebook05.md"
   }
 }

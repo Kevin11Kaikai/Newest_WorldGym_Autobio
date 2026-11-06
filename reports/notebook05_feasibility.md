@@ -3,7 +3,7 @@
 Audit date: 2026-11-06. Starting repository commit:
 `cc99d77e1b3485776a840eab97feb25397ada468`.
 
-GitHub exposed one branch (`main`), no pull requests, and four notebooks. The
+At the initial audit, GitHub exposed one branch (`main`), no pull requests, and four notebooks. The
 latest commit timestamp is 2026-11-03 02:30 UTC. The accessible uploaded
 `05_ivideogpt_vp2_visual_world_model.ipynb` is a different RoboDesk push_red
 experiment, not the AutoBio closed loop. No Stage 4 checkpoint or original
@@ -22,13 +22,15 @@ to one bounded testable loop. No fresh generic task prompt was generated.
 | Baseline policy | Notebook 04 appendix: state student `dense50_10000.pt` plus lift rule | Policy SHA256 known; weights/source absent | BLOCKED; import original bundle |
 | Stage 4 dynamics | Notebook 04: tube-specific 128-D latent model, repair_v2 step 8000 | Saved `z`, `a`, `pred` shapes inspected | BLOCKED; no actual encoder/dynamics/readout classes or checkpoint public |
 | Public ACT/video runtime | `Scripts/runtime/environment_runtime.py:Physical,Native` | Source inspection | READY for its own interface; not a Stage 4 latent loader |
-| Physical packet execution | `dyna05/mujoco_backend.py:MuJoCoTube` | Contract tests and source matched to AutoBio; live engine unavailable | REPAIRABLE; requires original task/encoder and dependencies |
+| Physical packet execution | `dyna05/mujoco_backend.py:MuJoCoTube` | Contract tests and source matched to AutoBio; MuJoCo 3.3.0 now installed; original task assets unavailable | REPAIRABLE; requires original task/encoder and dependencies |
 | Candidate generation | `core.py:generate_candidates,Candidate.apply` | Determinism, bounds, shape tests | READY; finite policy search, no GRPO claim |
 | Recursive dual rollouts | `core.py:rollout` | Independent resets, evolving feedback, terminal handling and source-label tests | READY core; real model adapter blocked |
 | Actual-feedback model update | `core.py:RewardCorrection.fit` | Label/split guards, save/reload, accepted/rejected update paths | READY reward head; latent parameters remain frozen |
 | Real policy selection | `core.py:run_cycle` | Optimistic false-success model cannot promote all-failing candidates | READY core; real outcome still unknown |
 | Fixed-state final evaluation | `run_cycle`, `paired_difference`, `confusion` | Test queried only after frozen policy selection; paired metric tests | READY; fresh IDs require original seed-manifest check |
-| Full GRPO and latent fine-tuning | November 4 harness target | No meaningful stochastic likelihood or original latent loss available | BLOCKED/deferred; not replaced by a mislabeled algorithm |
+| GRPO training | `grpo.py`: bounded stochastic policy, transformed likelihood, group advantage, clipped objective, frozen reference, optimizer/RNG checkpoints | Actual backward/Adam, known synthetic objective improves, exact checkpoint resume | IMPLEMENTED; original-task training requires bundle |
+| Latent dynamics fit | `latent.py`: recursive transition/state/height/contact losses, frozen encoder, independent validation | Transition weights actually change; regression gate tested | IMPLEMENTED; actual original wrapper/weights required |
+| Full training round | `training.py`: GRPO A → simulator transitions → dynamics fit → GRPO B + equal-compute T0 → physical confirm/test | Full synthetic pipeline, data isolation, final states accessed only after freezing | IMPLEMENTED; fresh AutoBio results remain unavailable |
 
 ## Repository verification repair
 
@@ -44,3 +46,12 @@ AutoBio/MuJoCo closed-loop experiment has **not** run. The actual baseline/updat
 success rates and actual model-error change are therefore unknown. Read
 `notebook05_preflight.json` for the specific missing assets and dependencies,
 and `docs/notebook05.md` for the exact bridge and execution command.
+
+## Follow-up extension on the same Notebook05
+
+The existing draft PR #1 branch was inspected and extended. No additional notebook
+was created. The workspace now has PyTorch 2.6.0+cpu and MuJoCo 3.3.0. Targeted
+GitHub/release, connected-file and workspace checks still did not locate the
+private `dense50_10000.pt`/repair_v2 bundle. Public traces point to the original
+Windows experiment directory; it is not mounted here. All saved optimizer test
+metrics remain labelled synthetic and are excluded from AutoBio research results.

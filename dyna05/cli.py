@@ -1,4 +1,4 @@
-"""python -m dyna05.cli audit | preflight | run"""
+"""python -m dyna05.cli audit | preflight | run | train"""
 from dataclasses import asdict
 from pathlib import Path
 import argparse
@@ -21,6 +21,10 @@ def main():
     run.add_argument('--assets', required=True)
     run.add_argument('--config', default='configs/notebook05.json')
     run.add_argument('--output', required=True)
+    train = sub.add_parser('train', help='GRPO + actual latent dynamics fine-tuning + paired simulator test')
+    train.add_argument('--assets', required=True)
+    train.add_argument('--config', default='configs/notebook05_training.json')
+    train.add_argument('--output', required=True)
     args = parser.parse_args()
     if args.command == 'audit':
         print(json.dumps(audit_stage4(args.root), indent=2))
@@ -29,7 +33,12 @@ def main():
         result = preflight(args.assets)
         print(json.dumps(result, indent=2))
         return 2 if result['blockers'] else 0
-    config = Config(**json.loads(Path(args.config).read_text()))
+    if args.command == 'train':
+        from .training import TrainingConfig, run_training
+        config_class = TrainingConfig
+    else:
+        config_class = Config
+    config = config_class(**json.loads(Path(args.config).read_text()))
     config.check()
     bundle, audit = load_real_bundle(args.assets, config)
     start = time.perf_counter()
@@ -38,10 +47,18 @@ def main():
                       sources={str(p): file_sha256(p) for p in Path(__file__).parent.glob('*.py')},
                       config_sha256=file_sha256(args.config))
     try:
-        provenance['bridge_check'] = check_bridge(bundle['simulator'], bundle['world_model'],
-                                                  bundle['controller'], config.collect[0])
-        result = run_cycle(bundle['simulator'], bundle['world_model'], bundle['controller'],
-                           args.output, config, provenance=provenance)
+        if args.command == 'train':
+            if 'trainable_model' not in bundle:
+                raise ValueError('Original bridge must expose trainable_model; see docs/notebook05.md')
+            import torch, mujoco
+            provenance.update(torch=torch.__version__, mujoco=mujoco.__version__)
+            result = run_training(bundle['simulator'], bundle['world_model'], bundle['controller'],
+                                  bundle['trainable_model'], args.output, config, provenance=provenance)
+        else:
+            provenance['bridge_check'] = check_bridge(bundle['simulator'], bundle['world_model'],
+                                                      bundle['controller'], config.collect[0])
+            result = run_cycle(bundle['simulator'], bundle['world_model'], bundle['controller'],
+                               args.output, config, provenance=provenance)
         result['elapsed_seconds'] = time.perf_counter() - start
         write_json(Path(args.output) / 'result.json', result)
         print(json.dumps(result, indent=2))

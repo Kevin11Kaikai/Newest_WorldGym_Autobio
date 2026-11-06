@@ -61,7 +61,9 @@ def load_real_bundle(manifest_path, config):
     history = json.loads(Path(resources['training_seed_manifest']).read_text())
     if history.get('complete') is not True or not isinstance(history.get('used_seeds'), list):
         raise ValueError('A complete original training/development seed manifest is required')
-    new_seeds = set(sum((getattr(config, x) for x in ('collect', 'validate', 'search', 'confirm', 'test')), []))
+    split_values = config.splits().values() if hasattr(config, 'splits') else (
+        getattr(config, x) for x in ('collect', 'validate', 'search', 'confirm', 'test'))
+    new_seeds = set(sum(split_values, []))
     if new_seeds & set(history['used_seeds']):
         raise ValueError('New experiment seeds overlap original training/development seeds')
     schema = json.loads(Path(resources['state_action_schema']).read_text())
