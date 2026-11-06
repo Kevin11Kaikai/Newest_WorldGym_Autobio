@@ -1,0 +1,28 @@
+{
+  "stage4_source_available": false,
+  "policy_checkpoint": {
+    "path": null,
+    "sha256": "9e6fca7e3bb15b4dee2dcb8ce15b68d324370bd6b8eddcbe9da5886a31f0f2a1",
+    "description": "Original dense50_10000.pt, state student distilled from 80-demo ACT"
+  },
+  "world_model_checkpoint": {
+    "path": null,
+    "sha256": null,
+    "description": "Original tube repair_v2 step 8000; public metadata does not expose its hash"
+  },
+  "state_action_schema": {
+    "path": null,
+    "sha256": null,
+    "description": "Original state order, controller normalization, encoder/decoder normalization, action units and lift-rule timing; packet_shape=[10,7], packet_seconds=0.2"
+  },
+  "training_seed_manifest": {
+    "path": null,
+    "sha256": null,
+    "description": "JSON with complete=true and used_seeds covering original training/development/selection seeds"
+  },
+  "bridge_source": {
+    "path": null,
+    "sha256": null,
+    "description": "Original architecture adapter: build(resources, schema) returns simulator, controller, world_model, and original trainable_model; see docs/notebook05.md"
+  }
+}

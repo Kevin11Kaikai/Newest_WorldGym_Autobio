@@ -228,8 +228,8 @@
     },
     {
       "path": "media/stage3/star_extra_replay.json",
-      "sha256": "d557d115da9572ef9f5966915b92c791dc705f5de94671fbfc1424c9aa6c45cf",
-      "bytes": 557
+      "sha256": "a2da577a5ee7a1e9d9ae65f789bbb38958e5eaf9039ef692eec55b8916dc4336",
+      "bytes": 542
     },
     {
       "path": "media/stage3/wm_failure_animation.mp4",
@@ -293,8 +293,8 @@
     },
     {
       "path": "media/stage4/manifest.json",
-      "sha256": "3335cc700b1dce6fb67e5ae2266a42dae2f4dc633f7ed4c7659aa5c0312bfce6",
-      "bytes": 2432
+      "sha256": "8f54eb800fdfb7b980e051761ab848bf898cb099277e3fac4ef4eeb7d6505676",
+      "bytes": 2407
     },
     {
       "path": "media/stage4/sim_failure.mp4",
@@ -338,8 +338,8 @@
     },
     {
       "path": "media/stage4/summary.json",
-      "sha256": "39145bd1ede70af5ae5d37cc07da01a2d3f06b07a3089fca753ef431e2bc1505",
-      "bytes": 10216
+      "sha256": "3027ec215e93b5911a0481bb8f6c70fd18c9a4ae4a5437e57fb9880962cdc177",
+      "bytes": 9691
     },
     {
       "path": "media/stage4/tube_dynamics_lessons_en.png",

@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "assets": 80,
+  "evidence": {
+    "stage1_scenes": 50,
+    "stage2_development_scenes": 10,
+    "status": "PASS_SAVED_RECORD_CHECKS",
+    "new_inference": false
+  },
+  "notebooks": [
+    {
+      "notebook": "01_act_imitation_learning.ipynb",
+      "status": "PASS",
+      "executor": "inprocess",
+      "code_cells": 2,
+      "seconds": 1.2238419149980473
+    },
+    {
+      "notebook": "02_worldgym_policy_evaluation.ipynb",
+      "status": "PASS",
+      "executor": "inprocess",
+      "code_cells": 1,
+      "seconds": 1.0799911049980437
+    },
+    {
+      "notebook": "03_latent_pickcube_policy_evaluation.ipynb",
+      "status": "PASS",
+      "executor": "inprocess",
+      "code_cells": 15,
+      "seconds": 2.058924291999574
+    },
+    {
+      "notebook": "04_latent_tube_policy_evaluation.ipynb",
+      "status": "PASS",
+      "executor": "inprocess",
+      "code_cells": 15,
+      "seconds": 3.0730311080005777
+    },
+    {
+      "notebook": "05_dyna_style_closed_loop.ipynb",
+      "status": "PASS",
+      "executor": "inprocess",
+      "code_cells": 7,
+      "seconds": 8.357867180999165
+    }
+  ],
+  "new_inference": false,
+  "audit_date": "2026-11-06",
+  "real_mujoco_experiment_executed": false,
+  "independent_tests": 52,
+  "original_stage4_assets_available": false,
+  "synthetic_optimizer_training_executed": true,
+  "packages": {
+    "torch": "2.6.0+cpu",
+    "mujoco": "3.3.0",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8",
+    "nbformat": "5.11.1",
+    "pytest": "9.2.0"
+  },
+  "standard_kernel_transport": "Local host socket restrictions: fresh IPython processes used; CI uses Jupyter kernels",
+  "plot_visual_inspection": "PASS: historical confusion matrix inspected; no new outcome chart fabricated",
+  "html_preview": "Exported successfully; browser layout inspection unavailable in this workspace"
+}

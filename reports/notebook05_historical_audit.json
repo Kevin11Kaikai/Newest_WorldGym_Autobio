@@ -1,0 +1,41 @@
+{
+  "evidence_kind": "historical_stage4_records",
+  "new_simulator_runs": 0,
+  "checked_files": 25,
+  "metrics": {
+    "n": 100,
+    "tp": 86,
+    "fn": 4,
+    "fp": 9,
+    "tn": 1,
+    "simulator_successes": 90,
+    "predicted_successes": 95,
+    "agreement": 0.87,
+    "false_success_among_failures": 0.9,
+    "failure_recall": 0.1,
+    "false_success_among_predictions": 0.09473684210526316
+  },
+  "traces": [
+    {
+      "seed": 10290200,
+      "model_steps": 45,
+      "latent_dim": 128
+    },
+    {
+      "seed": 10290298,
+      "model_steps": 113,
+      "latent_dim": 128
+    },
+    {
+      "seed": 10290212,
+      "model_steps": 113,
+      "latent_dim": 128
+    },
+    {
+      "seed": 10290201,
+      "model_steps": 50,
+      "latent_dim": 128
+    }
+  ],
+  "policy_sha256": "9e6fca7e3bb15b4dee2dcb8ce15b68d324370bd6b8eddcbe9da5886a31f0f2a1"
+}
